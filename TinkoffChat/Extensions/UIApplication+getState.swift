@@ -6,4 +6,20 @@
 //  Copyright © 2019 n.kuznetsov. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+
+extension UIApplication {
+    func getState() -> String {
+        switch self.applicationState {
+        case .active:
+            return "active"
+            
+        case .inactive:
+            return "inactive"
+            
+        case .background:
+            return "background"
+        }
+    }
+}
