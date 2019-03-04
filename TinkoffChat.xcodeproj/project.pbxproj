@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		59690FB9222864D9001A823B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59690FB8222864D9001A823B /* AppDelegate.swift */; };
-		59690FBB222864D9001A823B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59690FBA222864D9001A823B /* ViewController.swift */; };
+		59690FBB222864D9001A823B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59690FBA222864D9001A823B /* ProfileViewController.swift */; };
 		59690FBE222864D9001A823B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59690FBC222864D9001A823B /* Main.storyboard */; };
 		59690FC1222864D9001A823B /* TinkoffChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59690FBF222864D9001A823B /* TinkoffChat.xcdatamodeld */; };
 		59690FC3222864DB001A823B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59690FC2222864DB001A823B /* Assets.xcassets */; };
@@ -19,7 +19,7 @@
 /* Begin PBXFileReference section */
 		59690FB5222864D9001A823B /* TinkoffChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59690FB8222864D9001A823B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		59690FBA222864D9001A823B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		59690FBA222864D9001A823B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		59690FBD222864D9001A823B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		59690FC0222864D9001A823B /* TinkoffChat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TinkoffChat.xcdatamodel; sourceTree = "<group>"; };
 		59690FC2222864DB001A823B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,14 +58,11 @@
 		59690FB7222864D9001A823B /* TinkoffChat */ = {
 			isa = PBXGroup;
 			children = (
+				59690FD4222DB379001A823B /* Controller */,
+				59690FD3222DB372001A823B /* View */,
+				59690FD2222DB364001A823B /* Model */,
 				59690FCD2228673A001A823B /* Extensions */,
-				59690FB8222864D9001A823B /* AppDelegate.swift */,
-				59690FBA222864D9001A823B /* ViewController.swift */,
-				59690FBC222864D9001A823B /* Main.storyboard */,
-				59690FC2222864DB001A823B /* Assets.xcassets */,
-				59690FC4222864DB001A823B /* LaunchScreen.storyboard */,
-				59690FC7222864DB001A823B /* Info.plist */,
-				59690FBF222864D9001A823B /* TinkoffChat.xcdatamodeld */,
+				59690FD5222DB3C1001A823B /* Supporting files */,
 			);
 			path = TinkoffChat;
 			sourceTree = "<group>";
@@ -76,6 +73,41 @@
 				59690FCE22286762001A823B /* UIApplication+getState.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		59690FD2222DB364001A823B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		59690FD3222DB372001A823B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				59690FBC222864D9001A823B /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		59690FD4222DB379001A823B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				59690FBA222864D9001A823B /* ProfileViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		59690FD5222DB3C1001A823B /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				59690FBF222864D9001A823B /* TinkoffChat.xcdatamodeld */,
+				59690FC7222864DB001A823B /* Info.plist */,
+				59690FC4222864DB001A823B /* LaunchScreen.storyboard */,
+				59690FC2222864DB001A823B /* Assets.xcassets */,
+				59690FB8222864D9001A823B /* AppDelegate.swift */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59690FBB222864D9001A823B /* ViewController.swift in Sources */,
+				59690FBB222864D9001A823B /* ProfileViewController.swift in Sources */,
 				59690FCF22286762001A823B /* UIApplication+getState.swift in Sources */,
 				59690FB9222864D9001A823B /* AppDelegate.swift in Sources */,
 				59690FC1222864D9001A823B /* TinkoffChat.xcdatamodeld in Sources */,
@@ -301,7 +333,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = TinkoffChat/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TinkoffChat/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -322,7 +354,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = TinkoffChat/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TinkoffChat/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
