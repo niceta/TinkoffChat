@@ -10,15 +10,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TinkoffChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ProfileViewController" customModule="TinkoffChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cQb-i5-0kJ" userLabel="AvatarImage">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AvatarImage" translatesAutoresizingMaskIntoConstraints="NO" id="cQb-i5-0kJ" userLabel="AvatarImage">
                                 <rect key="frame" x="16" y="30" width="288" height="288"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cQb-i5-0kJ" secondAttribute="height" multiplier="1:1" id="kmA-NP-PdN"/>
@@ -30,13 +30,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ock-gV-Ikd">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ock-gV-Ikd" userLabel="EditDescriptionButton">
                                 <rect key="frame" x="16" y="509" width="288" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="fvd-Kj-pBv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Редактировать"/>
+                                <state key="normal" title="Редактировать">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👨🏼‍💻 Люблю программировать под IOS 👨‍🎓 Изучать новые технологии 👨‍🏫 Помогаю развиваться другим" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnh-0v-2pZ">
                                 <rect key="frame" x="16" y="402" width="288" height="57.5"/>
@@ -44,14 +46,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sat-yr-Efc">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" semanticContentAttribute="playback" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sat-yr-Efc" userLabel="SetAvatarButton">
                                 <rect key="frame" x="244" y="258" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Sat-yr-Efc" secondAttribute="height" multiplier="1:1" id="5BP-xv-6Ry"/>
                                     <constraint firstAttribute="height" constant="60" id="RaG-yc-B3V"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="kf5-FO-liC"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button" image="PhotoImage"/>
+                                <connections>
+                                    <action selector="setAvatarButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mvp-Se-Dsp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -74,10 +80,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="avatarImage" destination="cQb-i5-0kJ" id="qUp-YI-MuK"/>
+                        <outlet property="editDescriptionButton" destination="Ock-gV-Ikd" id="dJd-do-1Le"/>
+                        <outlet property="setAvatarButton" destination="Sat-yr-Efc" id="xjM-Gv-ACQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-346.875" y="26.408450704225352"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AvatarImage" width="600" height="600"/>
+        <image name="PhotoImage" width="256" height="256"/>
+    </resources>
 </document>
