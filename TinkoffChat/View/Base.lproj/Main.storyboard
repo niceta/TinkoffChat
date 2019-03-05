@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,15 +15,65 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TinkoffChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cQb-i5-0kJ" userLabel="AvatarImage">
+                                <rect key="frame" x="16" y="30" width="288" height="259"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="2PR-IP-ZvO"/>
+                                    <constraint firstAttribute="height" constant="259" id="umg-Zn-le6"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Никита Кузнецов" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOb-d9-u6c">
+                                <rect key="frame" x="16" y="299" width="288" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="UFT-OW-4jL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👨🏼‍💻 Люблю программировать под IOS 👨‍🎓 Изучать новые технологии 👨‍🏫 Помогаю развиваться другим" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnh-0v-2pZ">
+                                <rect key="frame" x="16" y="339" width="288" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ock-gV-Ikd">
+                                <rect key="frame" x="16" y="474.5" width="288" height="73.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73.5" id="2z2-IK-qts"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Редактировать"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cQb-i5-0kJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="CdP-Ac-7eO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ock-gV-Ikd" secondAttribute="trailing" constant="16" id="Ea5-eK-qe2"/>
+                            <constraint firstItem="cQb-i5-0kJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="HVL-TU-WVh"/>
+                            <constraint firstItem="wnh-0v-2pZ" firstAttribute="top" secondItem="ZOb-d9-u6c" secondAttribute="bottom" constant="10" id="RSI-eo-Zq4"/>
+                            <constraint firstItem="cQb-i5-0kJ" firstAttribute="leading" secondItem="ZOb-d9-u6c" secondAttribute="leading" id="V84-Z3-C6a"/>
+                            <constraint firstItem="ZOb-d9-u6c" firstAttribute="top" secondItem="cQb-i5-0kJ" secondAttribute="bottom" constant="10" id="aos-Mk-2Jz"/>
+                            <constraint firstItem="cQb-i5-0kJ" firstAttribute="trailing" secondItem="wnh-0v-2pZ" secondAttribute="trailing" id="b15-EV-cIw"/>
+                            <constraint firstItem="ZOb-d9-u6c" firstAttribute="top" secondItem="cQb-i5-0kJ" secondAttribute="bottom" constant="10" id="bVX-NB-Dp3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZOb-d9-u6c" secondAttribute="trailing" constant="16" id="dhi-Ri-32A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ock-gV-Ikd" secondAttribute="bottom" constant="20" id="hBy-h6-1dR"/>
+                            <constraint firstItem="Ock-gV-Ikd" firstAttribute="top" secondItem="wnh-0v-2pZ" secondAttribute="bottom" constant="78" id="kl4-dR-dI8"/>
+                            <constraint firstItem="ZOb-d9-u6c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="psz-PC-Jhd"/>
+                            <constraint firstItem="cQb-i5-0kJ" firstAttribute="leading" secondItem="wnh-0v-2pZ" secondAttribute="leading" id="tYP-dc-Vbe"/>
+                            <constraint firstItem="Ock-gV-Ikd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ucm-Gn-HkS"/>
+                            <constraint firstItem="ZOb-d9-u6c" firstAttribute="top" secondItem="cQb-i5-0kJ" secondAttribute="bottom" constant="10" id="wGN-9C-ZlN"/>
+                            <constraint firstItem="ZOb-d9-u6c" firstAttribute="top" secondItem="cQb-i5-0kJ" secondAttribute="bottom" constant="10" id="wPU-Yx-xYc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-346" y="27"/>
+            <point key="canvasLocation" x="-346.875" y="26.408450704225352"/>
         </scene>
     </scenes>
 </document>
