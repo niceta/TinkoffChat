@@ -14,16 +14,17 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var setAvatarButton: UIButton!
     @IBOutlet weak var editDescriptionButton: UIButton!
     @IBAction func setAvatarButton(_ sender: Any) {
+        print("Выбери изображение профиля")
     }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //setUiViewsSetting()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
         let cornerRadius = setAvatarButton.frame.height / 2
         
         avatarImage.layer.cornerRadius = cornerRadius
@@ -38,5 +39,9 @@ class ProfileViewController: UIViewController {
         editDescriptionButton.layer.borderWidth = 1.0
         editDescriptionButton.layer.borderColor = UIColor.black.cgColor
         editDescriptionButton.layer.backgroundColor = UIColor.white.cgColor
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
 }
