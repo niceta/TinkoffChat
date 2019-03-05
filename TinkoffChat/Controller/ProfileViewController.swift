@@ -9,40 +9,34 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+ 
+    @IBOutlet weak var avatarImage: UIImageView!
+    @IBOutlet weak var setAvatarButton: UIButton!
+    @IBOutlet weak var editDescriptionButton: UIButton!
+    @IBAction func setAvatarButton(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        print(#function)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print(#function)
+        //setUiViewsSetting()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print(#function)
-    }
-    
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        print(#function)
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        print(#function)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print(#function)
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print(#function)
+        
+        let cornerRadius = setAvatarButton.frame.height / 2
+        
+        avatarImage.layer.cornerRadius = cornerRadius
+        //avatarImage.layer.masksToBounds = true
+        avatarImage.clipsToBounds = true
+        
+        let insetsValue: CGFloat = 20
+        setAvatarButton.imageEdgeInsets = UIEdgeInsets(top: insetsValue, left: insetsValue, bottom: insetsValue, right: insetsValue)
+        setAvatarButton.layer.cornerRadius = cornerRadius
+        
+        editDescriptionButton.layer.cornerRadius = editDescriptionButton.frame.height / 5
+        editDescriptionButton.layer.borderWidth = 1.0
+        editDescriptionButton.layer.borderColor = UIColor.black.cgColor
+        editDescriptionButton.layer.backgroundColor = UIColor.white.cgColor
     }
 }
