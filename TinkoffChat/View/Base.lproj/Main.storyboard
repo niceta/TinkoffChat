@@ -44,8 +44,8 @@
                                 <rect key="frame" x="244" y="258" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="Ca2-OT-Ocx"/>
-                                    <constraint firstAttribute="width" secondItem="Sat-yr-Efc" secondAttribute="height" multiplier="1:1" id="bgx-YF-Jun"/>
+                                    <constraint firstAttribute="width" secondItem="Sat-yr-Efc" secondAttribute="height" multiplier="1:1" id="FoK-eL-6Cq"/>
+                                    <constraint firstAttribute="height" constant="60" id="lEm-Mu-LTQ"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="PhotoImage"/>
                                 <connections>
@@ -64,6 +64,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wnh-0v-2pZ" secondAttribute="trailing" constant="16" id="0GJ-lM-iF5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sat-yr-Efc" secondAttribute="trailing" constant="16" id="7ip-EX-scp"/>
                             <constraint firstItem="cQb-i5-0kJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="A7e-wc-zh7"/>
+                            <constraint firstItem="Sat-yr-Efc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="244" id="Eio-Ut-Oe7"/>
                             <constraint firstItem="ZOb-d9-u6c" firstAttribute="top" secondItem="Sat-yr-Efc" secondAttribute="bottom" constant="10" id="O2Y-gg-K7f"/>
                             <constraint firstItem="wnh-0v-2pZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="PNe-s3-YxN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ock-gV-Ikd" secondAttribute="trailing" constant="16" id="Qef-LW-JY6"/>
