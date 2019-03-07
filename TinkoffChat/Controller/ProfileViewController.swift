@@ -13,13 +13,16 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var avatarImage: UIImageView!
     @IBOutlet weak var setAvatarButton: UIButton!
     @IBOutlet weak var editDescriptionButton: UIButton!
+    
+    var imagePicker = UIImagePickerController()
+    
     @IBAction func setAvatarButton(_ sender: Any) {
         print("Выбери изображение профиля")
+        openImagePickerAlert()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
     }
     
     override func viewDidLoad() {
@@ -28,7 +31,7 @@ class ProfileViewController: UIViewController {
         let cornerRadius = setAvatarButton.frame.height / 2
         
         avatarImage.layer.cornerRadius = cornerRadius
-        //avatarImage.layer.masksToBounds = true
+        //avatarImage.layer.masksToBounds = true  // 
         avatarImage.clipsToBounds = true
         
         let insetsValue: CGFloat = 20

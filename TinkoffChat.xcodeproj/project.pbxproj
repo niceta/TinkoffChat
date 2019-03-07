@@ -14,6 +14,7 @@
 		59690FC3222864DB001A823B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59690FC2222864DB001A823B /* Assets.xcassets */; };
 		59690FC6222864DB001A823B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59690FC4222864DB001A823B /* LaunchScreen.storyboard */; };
 		59690FCF22286762001A823B /* UIApplication+getState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59690FCE22286762001A823B /* UIApplication+getState.swift */; };
+		59690FDE22318411001A823B /* ProfileViewController+ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59690FDD22318411001A823B /* ProfileViewController+ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		59690FC5222864DB001A823B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		59690FC7222864DB001A823B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59690FCE22286762001A823B /* UIApplication+getState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+getState.swift"; sourceTree = "<group>"; };
+		59690FDD22318411001A823B /* ProfileViewController+ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController+ImagePicker.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				59690FCE22286762001A823B /* UIApplication+getState.swift */,
+				59690FDD22318411001A823B /* ProfileViewController+ImagePicker.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59690FDE22318411001A823B /* ProfileViewController+ImagePicker.swift in Sources */,
 				59690FBB222864D9001A823B /* ProfileViewController.swift in Sources */,
 				59690FCF22286762001A823B /* UIApplication+getState.swift in Sources */,
 				59690FB9222864D9001A823B /* AppDelegate.swift in Sources */,
