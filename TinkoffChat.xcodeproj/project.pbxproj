@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		591D7A5C223440E000DC45C3 /* ConversationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D7A5B223440E000DC45C3 /* ConversationsListViewController.swift */; };
 		59690FB9222864D9001A823B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59690FB8222864D9001A823B /* AppDelegate.swift */; };
 		59690FBB222864D9001A823B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59690FBA222864D9001A823B /* ProfileViewController.swift */; };
 		59690FBE222864D9001A823B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59690FBC222864D9001A823B /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		591D7A5B223440E000DC45C3 /* ConversationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsListViewController.swift; sourceTree = "<group>"; };
 		59690FB5222864D9001A823B /* TinkoffChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59690FB8222864D9001A823B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59690FBA222864D9001A823B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				59690FBA222864D9001A823B /* ProfileViewController.swift */,
+				591D7A5B223440E000DC45C3 /* ConversationsListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				59690FCF22286762001A823B /* UIApplication+getState.swift in Sources */,
 				59690FB9222864D9001A823B /* AppDelegate.swift in Sources */,
 				59690FC1222864D9001A823B /* TinkoffChat.xcdatamodeld in Sources */,
+				591D7A5C223440E000DC45C3 /* ConversationsListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

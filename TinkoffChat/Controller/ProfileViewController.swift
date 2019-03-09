@@ -13,12 +13,18 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var avatarImage: UIImageView!
     @IBOutlet weak var setAvatarButton: UIButton!
     @IBOutlet weak var editDescriptionButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
+
     
     var imagePicker = UIImagePickerController()
     
     @IBAction func setAvatarButton(_ sender: Any) {
         print("Выбери изображение профиля")
         openImagePickerAlert()
+    }
+    
+    @IBAction func backButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
